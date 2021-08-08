@@ -8,6 +8,11 @@ public class Capstone {
 
         System.out.println("Hello welcome to my Home Loan Calculator");
 
+        System.out.println("Please enter the principle amount you would like to borrow");
+        double principal = scanner.nextDouble();
+
+        System.out.println("Please enter the interest rate");
+
 
 
     }

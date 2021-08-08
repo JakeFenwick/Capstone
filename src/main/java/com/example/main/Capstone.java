@@ -12,6 +12,13 @@ public class Capstone {
         double principal = scanner.nextDouble();
 
         System.out.println("Please enter the interest rate");
+        float interest = scanner.nextFloat();
+
+        System.out.println("Please set how many years");
+        int years = scanner.nextInt();
+
+
+
 
 
 

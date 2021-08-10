@@ -6,6 +6,8 @@ public class Capstone {
 
         Scanner scanner = new Scanner(System.in);
 
+        final int months = 12;
+
         System.out.println("Hello welcome to my Home Loan Calculator");
 
         //Amount client would like to borrow
@@ -19,6 +21,8 @@ public class Capstone {
         //Number of Years
         System.out.println("Please set how many years");
         int years = scanner.nextInt();
+
+
 
 
 

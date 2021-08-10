@@ -14,10 +14,16 @@ public class Capstone {
 
 
         System.out.println("Hello welcome to my Home Loan Calculator");
+
         System.out.println("Please note that the calculator may not be able"  +
          " to give a value do due minimum salary requirements.");
 
-        // Please enter salary, will have loop to determine if they can proceed.
+        System.out.println("Please enter your salary");
+        double salary = scanner.nextDouble();
+
+        if(salary < minSal){
+            System.out.println("Sorry your not eligidble for a loan ");
+        } else { System.out.println("Thank you please proceed");}
 
         //Amount client would like to borrow
         System.out.println("Please enter the principle amount you would like to borrow");
@@ -47,3 +53,4 @@ public class Capstone {
 
     }
 }
+

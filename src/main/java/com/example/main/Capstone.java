@@ -13,7 +13,7 @@ public class Capstone {
         final float minSal = 35000;
 
 
-        System.out.println("Hello welcome to my Home Loan Calculator");
+        System.out.println("Hello welcome to my Loan Calculator");
 
         System.out.println("Please note that the calculator may not be able"  +
          " to give a value do due minimum salary requirements.");
@@ -22,8 +22,10 @@ public class Capstone {
         double salary = scanner.nextDouble();
 
         if(salary < minSal){
-            System.out.println("Sorry your not eligidble for a loan ");
-        } else { System.out.println("Thank you please proceed");}
+            System.out.println("Sorry your not eligible for a loan ");
+
+        } else { System.out.println("Thank you please proceed");
+        }
 
         //Amount client would like to borrow
         System.out.println("Please enter the principle amount you would like to borrow");
@@ -39,8 +41,12 @@ public class Capstone {
 
         // Create a method for calculating interest/months/years
 
-
         // print the output
+        System.out.println("Thank you, here is your loan information");
+
+        //Save output to a file
+
+
 
 
 

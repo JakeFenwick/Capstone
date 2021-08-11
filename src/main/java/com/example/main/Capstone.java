@@ -1,5 +1,4 @@
 package com.example.main;
-import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Capstone {
@@ -8,8 +7,7 @@ public class Capstone {
         Scanner scanner = new Scanner(System.in);
 
         // Cannot change
-        final int months = 12;
-        final int year = 1;
+        final int numOfMonths = 12;
         final float minSal = 35000;
 
 
@@ -37,26 +35,27 @@ public class Capstone {
 
         //Number of Years
         System.out.println("Please set how many years");
-        int years = scanner.nextInt();
+        int numOfYears = scanner.nextInt();
 
         scanner.close();
 
         // Create a method for calculating interest/months/years
-        float monthlyInterest = annualInterest / months;
-        int numOfPayments = years * months;
+        float monthlyInterest = annualInterest / numOfMonths;
+        int numOfPayments = numOfYears * numOfMonths;
 
-        double paymentPerMonth = principal * (
+        double monthlyPayment = principal * (
                 (monthlyInterest * (Math.pow(1 + monthlyInterest, numOfPayments))) /
                         ((Math.pow(1 + monthlyInterest, numOfPayments)) - 1)
-                );
-        System.out.println("Your monthly payment is: "
-                + NumberFormat.getCurrencyInstance().format(paymentPerMonth));
+        );
 
-        System.out.println("Your total repayment figures are: "
-                + NumberFormat.getCurrencyInstance().format(paymentPerMonth * numOfPayments));
+        double totalPayment = monthlyPayment / 100;
 
+
+
+
+        // Formula above is complete!
         // print the output
-        System.out.println("Thank you for using my loan calculator");
+        System.out.println(totalPayment);
 
 
         //Save output to a file

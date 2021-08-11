@@ -7,7 +7,6 @@ public class Capstone {
         Scanner scanner = new Scanner(System.in);
 
         // Cannot change
-        final int weeks = 52;
         final int months = 12;
         final int year = 1;
         final float minSal = 35000;
@@ -33,16 +32,22 @@ public class Capstone {
 
         //Clients selected interest rate
         System.out.println("Please enter the interest rate");
-        float interest = scanner.nextFloat();
+        float annualInterest = scanner.nextFloat();
 
         //Number of Years
         System.out.println("Please set how many years");
         int years = scanner.nextInt();
 
         // Create a method for calculating interest/months/years
+        float monthlyInterest = annualInterest / months;
+        int numOfPayments = years * months;
+
+        double paymentPerMonth = ;
+        System.out.println("Your monthly payment is: " + paymentPerMonth);
 
         // print the output
         System.out.println("Thank you, here is your loan information");
+
 
         //Save output to a file
 

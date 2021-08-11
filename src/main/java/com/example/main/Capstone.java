@@ -1,6 +1,7 @@
 package com.example.main;
 import java.text.NumberFormat;
 import java.util.Scanner;
+import java.io.*;
 
 public class Capstone {
     public static void main(String[] args) {
@@ -49,20 +50,33 @@ public class Capstone {
                         ((Math.pow(1 + monthlyInterest, numOfPayments)) - 1)
         );
 
+        double total = monthlyPayment / 100;
+
 
         // Formula above is complete
         // For interest 0.4 = 4%
 
 
         // print the output
-        System.out.println("The monthly payment is: " + NumberFormat.getCurrencyInstance().format(monthlyPayment));
+        System.out.println("The monthly payment is: " + NumberFormat.getCurrencyInstance().format(total));
 
-        System.out.println("The Total payback is " + NumberFormat.getCurrencyInstance().format(monthlyPayment * numOfPayments));
+        System.out.println("The Total payback is " + NumberFormat.getCurrencyInstance().format(total * numOfPayments));
 
 
         //Save output to a file
 
+        try {
 
+            FileWriter myWriter = new FileWriter("Output.txt");
+
+            myWriter.write(String.valueOf("Your Monthly Payment is: $ "+ total));
+            myWriter.close();
+            System.out.println("Successfully wrote to the file.");
+
+        } catch (IOException e) {
+            System.out.println("An error occurred.");
+            e.printStackTrace();
+        }
 
 
 

@@ -42,7 +42,10 @@ public class Capstone {
         float monthlyInterest = annualInterest / months;
         int numOfPayments = years * months;
 
-        double paymentPerMonth = ;
+        double paymentPerMonth = principal * (
+                (monthlyInterest * (Math.pow(1 + monthlyInterest, numOfPayments))) /
+                        ((Math.pow(1 + monthlyInterest, numOfPayments)) - 1)
+                );
         System.out.println("Your monthly payment is: " + paymentPerMonth);
 
         // print the output

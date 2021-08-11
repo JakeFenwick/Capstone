@@ -48,13 +48,12 @@ public class Capstone {
                 (monthlyInterest * (Math.pow(1 + monthlyInterest, numOfPayments))) /
                         ((Math.pow(1 + monthlyInterest, numOfPayments)) - 1)
         );
-        // so you can enter an actual percentage
-        double totalPayment = monthlyPayment / 100;
 
 
+        // Formula above is complete
+        // For interest 0.4 = 4%
 
 
-        // Formula above is complete!
         // print the output
         System.out.println("The monthly payment is: " + NumberFormat.getCurrencyInstance().format(monthlyPayment));
 

@@ -1,4 +1,5 @@
 package com.example.main;
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Capstone {
@@ -47,7 +48,7 @@ public class Capstone {
                 (monthlyInterest * (Math.pow(1 + monthlyInterest, numOfPayments))) /
                         ((Math.pow(1 + monthlyInterest, numOfPayments)) - 1)
         );
-
+        // so you can enter an actual percentage
         double totalPayment = monthlyPayment / 100;
 
 
@@ -55,7 +56,9 @@ public class Capstone {
 
         // Formula above is complete!
         // print the output
-        System.out.println(totalPayment);
+        System.out.println("The monthly payment is: " + NumberFormat.getCurrencyInstance().format(monthlyPayment));
+
+        System.out.println("The Total payback is " + NumberFormat.getCurrencyInstance().format(monthlyPayment * numOfPayments));
 
 
         //Save output to a file

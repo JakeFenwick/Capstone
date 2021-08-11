@@ -1,4 +1,5 @@
 package com.example.main;
+import java.text.NumberFormat;
 import java.util.Scanner;
 
 public class Capstone {
@@ -38,6 +39,8 @@ public class Capstone {
         System.out.println("Please set how many years");
         int years = scanner.nextInt();
 
+        scanner.close();
+
         // Create a method for calculating interest/months/years
         float monthlyInterest = annualInterest / months;
         int numOfPayments = years * months;
@@ -46,10 +49,14 @@ public class Capstone {
                 (monthlyInterest * (Math.pow(1 + monthlyInterest, numOfPayments))) /
                         ((Math.pow(1 + monthlyInterest, numOfPayments)) - 1)
                 );
-        System.out.println("Your monthly payment is: " + paymentPerMonth);
+        System.out.println("Your monthly payment is: "
+                + NumberFormat.getCurrencyInstance().format(paymentPerMonth));
+
+        System.out.println("Your total repayment figures are: "
+                + NumberFormat.getCurrencyInstance().format(paymentPerMonth * numOfPayments));
 
         // print the output
-        System.out.println("Thank you, here is your loan information");
+        System.out.println("Thank you for using my loan calculator");
 
 
         //Save output to a file
